@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gestão de Pessoas</title>
+<style>
+:root{
+  --bg:#0f172a; --card:#ffffff; --text:#172033; --muted:#64748b;
+  --accent:#2563eb; --accent2:#0ea5e9; --line:#dbe3ee;
+  --soft:#eff6ff; --danger:#b91c1c;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#e9eef5;color:var(--text);line-height:1.55}
+.top{background:linear-gradient(135deg,#0f172a,#1e3a8a);color:#fff;padding:34px 20px}
+.top .wrap,.wrap{max-width:1100px;margin:auto}
+.brand{font-size:14px;letter-spacing:1.5px;text-transform:uppercase;opacity:.85}
+h1{margin:8px 0;font-size:32px}
+.subtitle{font-size:17px;max-width:850px}
+.badges{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.badge{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);padding:7px 12px;border-radius:999px;font-size:13px}
+main{padding:28px 15px 60px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px;margin:18px 0;box-shadow:0 5px 18px rgba(15,23,42,.06)}
+h2{margin-top:0;color:#173b7a}
+h3{color:#1e40af;margin-bottom:7px}
+.callout{border-left:5px solid var(--accent);background:var(--soft);padding:15px 17px;border-radius:8px;margin:15px 0}
+.warning{border-left-color:#dc2626;background:#fef2f2}
+table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+th,td{border:1px solid var(--line);padding:10px;vertical-align:top}
+th{background:#f1f5f9;text-align:left}
+.question{border-top:1px solid var(--line);padding:18px 0}
+.question:first-child{border-top:0}
+.qnum{font-weight:700;color:#1d4ed8}
+textarea,input[type=text]{width:100%;border:1px solid #cbd5e1;border-radius:9px;padding:11px;font:inherit;margin-top:8px}
+textarea{min-height:110px;resize:vertical}
+.short textarea{min-height:70px}
+.options label{display:block;padding:7px 9px;margin:5px 0;border:1px solid var(--line);border-radius:8px}
+.options input{margin-right:8px}
+.btns{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+button{border:0;border-radius:9px;padding:11px 16px;font-weight:700;cursor:pointer;background:var(--accent);color:white}
+button.secondary{background:#475569}
+button.danger{background:#b91c1c}
+#result{display:none;background:#ecfdf5;border:1px solid #86efac;border-radius:10px;padding:15px;margin-top:15px}
+.footer{color:#64748b;text-align:center;font-size:13px;padding:25px}
+@media print{
+ body{background:#fff}.top{background:#fff;color:#000;border-bottom:2px solid #000}
+ .card{box-shadow:none;break-inside:avoid}.btns{display:none}
+ textarea{border:1px solid #777;min-height:120px}
+}
+
+/* PROTEÇÃO DA ATIVIDADE */
+body, body * {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+}
+textarea, input {
+  -webkit-user-select: text !important;
+  -moz-user-select: text !important;
+  user-select: text !important;
+  -webkit-touch-callout: default !important;
+}
+
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <div class="brand">JÉFFERSON AZEVEDO • FUNDAMENTOS DE PROCESSOS DE GESTÃO DE PESSOAS</div>
+    <h1>Estudo de Caso — Gestão de Pessoas em Situação Crítica</h1>
+    <div class="subtitle">Férias, clima organizacional, contratação, baixa produtividade, demissão e acidentes do trabalho.</div>
+    
+  </div>
+</header>
+
+<main class="wrap">
+<div class="question">
+<div class="qnum">Dados do aluno(a)</div>
+<p>Digite seu nome no campo abaixo:</p>
+<textarea placeholder="Digite seu nome:"></textarea>
+</div>
+
+<section class="card">
+<h2>1. Orientações da atividade</h2>
+<p>Você fará parte de uma equipe de consultoria contratada para analisar uma empresa que apresenta problemas simultâneos de gestão de pessoas. O desafio é identificar as causas, relacionar os problemas e propor soluções viáveis.</p>
+<div class="callout">
+<strong>Produto final:</strong> elaborar um diagnóstico de Gestão de Pessoas e um plano de intervenção, justificando cada decisão com base nas informações do caso.
+</div>
+<ul>
+<li>Leia todo o caso antes de responder.</li>
+<li>Não trate os problemas de forma isolada: procure relações entre férias, clima, produtividade, contratação, desligamentos e acidentes.</li>
+<li>Apresente argumentos, indicadores e prioridades.</li>
+<li>Quando faltar informação, indique qual dado deveria ser levantado pela empresa.</li>
+</ul>
+</section>
+
+<section class="card">
+<h2>2. Conexão com o material-base</h2>
+<p>O material utilizado como referência apresenta os fundamentos relacionados às <strong>férias</strong>, incluindo período aquisitivo, período concessivo, quantidade de dias, pagamento, 1/3 constitucional, fracionamento, abono pecuniário, definição do período, comunicação, relação entre férias e saúde do trabalhador e férias proporcionais. fileciteturn0file0L25-L97</p>
+<div class="callout">
+<strong>Atenção:</strong> nesta atividade, os conceitos de férias serão analisados dentro de um problema maior de Gestão de Pessoas. Os demais temas foram acrescentados para ampliar o diagnóstico organizacional.
+</div>
+</section>
+
+
+
+<section class="card">
+<h2>3. Estudo de caso — Empresa Horizonte</h2>
+<p>A <strong>Empresa Horizonte Serviços e Operações Ltda.</strong> possui 86 colaboradores e atua em dois turnos. Nos últimos 12 meses, a direção percebeu aumento das reclamações internas, queda de produtividade e crescimento dos desligamentos.</p>
+
+<h3>3.1 Situação das férias</h3>
+<p>O setor de Recursos Humanos informa que existem colaboradores com períodos de férias próximos do limite para concessão. Alguns trabalhadores relatam que tiveram dificuldade para programar suas férias porque o setor estava com equipe reduzida. Outros afirmam que as férias foram alteradas várias vezes por causa da operação.</p>
+
+<h3>3.2 Clima organizacional</h3>
+<p>Uma pesquisa interna informal revelou que os funcionários percebem pouca comunicação entre liderança e equipe. Também foram relatadas sensação de sobrecarga, conflitos entre colegas, falta de reconhecimento e insegurança sobre a permanência no emprego.</p>
+
+<h3>3.3 Contratação</h3>
+<p>Para compensar as saídas, a empresa passou a contratar rapidamente. O processo seletivo foi reduzido e parte dos novos colaboradores iniciou as atividades sem receber informações suficientes sobre cultura, funções, regras internas e procedimentos de segurança.</p>
+
+<h3>3.4 Baixa produtividade</h3>
+<p>A produtividade média caiu 18% em seis meses. Supervisores atribuem o problema à falta de comprometimento dos funcionários. Os trabalhadores, por outro lado, afirmam que há excesso de tarefas, treinamento insuficiente, equipamentos com problemas e mudanças frequentes nas prioridades.</p>
+
+<h3>3.5 Acidentes do trabalho</h3>
+<p>Nos últimos seis meses ocorreram quatro acidentes registrados, dois deles envolvendo trabalhadores recém-contratados. Em uma das ocorrências, o colaborador informou que não conhecia adequadamente o procedimento de segurança da atividade. Após os acidentes, parte da equipe passou a demonstrar receio e aumento da percepção de risco.</p>
+
+<h3>3.6 Demissões</h3>
+<p>A direção decidiu aumentar os desligamentos de colaboradores considerados de baixa produtividade. Entretanto, não existe um processo padronizado de avaliação de desempenho. Em alguns casos, a decisão é baseada apenas na percepção do supervisor.</p>
+
+<div class="callout warning">
+<strong>Problema central:</strong> a empresa está tentando resolver queda de produtividade aumentando contratações e demissões, mas os indicadores sugerem que existem fatores relacionados ao clima, treinamento, organização do trabalho, férias, integração e segurança.
+</div>
+</section>
+
+<section class="card">
+<h2>4. Dados para análise</h2>
+<table>
+<tr><th>Indicador</th><th>Resultado atual</th><th>Observação</th></tr>
+<tr><td>Produtividade</td><td>−18%</td><td>Queda nos últimos 6 meses</td></tr>
+<tr><td>Desligamentos</td><td>22% ao ano</td><td>Maior entre novos contratados</td></tr>
+<tr><td>Acidentes registrados</td><td>4 em 6 meses</td><td>2 envolveram recém-contratados</td></tr>
+<tr><td>Férias pendentes/próximas do limite</td><td>14 colaboradores</td><td>Setores com equipe reduzida</td></tr>
+<tr><td>Treinamento de integração</td><td>Irregular</td><td>Não ocorre com o mesmo padrão para todos</td></tr>
+<tr><td>Clima organizacional</td><td>Baixa percepção</td><td>Comunicação, reconhecimento e sobrecarga aparecem como reclamações</td></tr>
+</table>
+</section>
+
+<section class="card">
+<h2>5. Missão da equipe</h2>
+<p>Assuma o papel de uma consultoria de Gestão de Pessoas. Seu trabalho deverá responder às questões e, ao final, apresentar um <strong>Plano de Ação Integrado</strong>.</p>
+
+<div class="question">
+<div class="qnum">Questão 1 — Diagnóstico sistêmico</div>
+<p>Identifique pelo menos <strong>6 problemas</strong> presentes no caso. Para cada problema, indique uma possível causa, uma consequência e o indicador que deveria ser acompanhado.</p>
+<textarea placeholder="Problema → causa → consequência → indicador"></textarea>
+</div>
+
+<div class="question">
+<div class="qnum">Questão 2 — Férias e planejamento</div>
+<p>Explique como uma gestão inadequada das férias pode contribuir para sobrecarga, insatisfação, queda de produtividade e riscos à saúde do trabalhador. Proponha um procedimento para organizar as férias da equipe.</p>
+<textarea></textarea>
+</div>
+
+<div class="question">
+<div class="qnum">Questão 3 — Clima organizacional</div>
+<p>Elabore um mini diagnóstico do clima organizacional. Crie <strong>5 perguntas</strong> que poderiam ser aplicadas aos colaboradores e defina uma escala de avaliação de 1 a 5.</p>
+<textarea></textarea>
+</div>
+
+<div class="question">
+<div class="qnum">Questão 4 — Contratação</div>
+<p>A empresa está contratando rapidamente. Analise os riscos desse processo e proponha um processo seletivo com pelo menos <strong>6 etapas</strong>, incluindo critérios objetivos.</p>
+<textarea></textarea>
+</div>
+
+<div class="question">
+<div class="qnum">Questão 5 — Onboarding</div>
+<p>Crie um roteiro de integração para os primeiros dias de um novo colaborador. Inclua cultura organizacional, função, equipe, procedimentos, segurança e acompanhamento.</p>
+<textarea></textarea>
+</div>
+
+<div class="question">
+<div class="qnum">Questão 6 — Baixa produtividade</div>
+<p>A direção afirma que a baixa produtividade ocorre por falta de comprometimento. Você concorda? Justifique utilizando pelo menos <strong>4 possíveis causas</strong> que aparecem no caso e proponha como investigá-las antes de tomar decisões de desligamento.</p>
+<textarea></textarea>
+</div>
+
+<div class="question">
+<div class="qnum">Questão 7 — Acidentes do trabalho</div>
+<p>Analise a relação entre contratação rápida, integração insuficiente, treinamento e acidentes. Elabore <strong>5 ações preventivas</strong> para reduzir novas ocorrências.</p>
+<textarea></textarea>
+</div>
+
+<div class="question">
+<div class="qnum">Questão 8 — Demissão</div>
+<p>A empresa pretende demitir colaboradores considerados de baixa produtividade. Explique por que uma decisão de desligamento baseada apenas na percepção do supervisor pode ser problemática. Proponha critérios para uma avaliação de desempenho mais justa.</p>
+<textarea></textarea>
+</div>
+
+<div class="question">
+<div class="qnum">Questão 9 — Relação entre os problemas</div>
+<p>Construa uma cadeia de causa e efeito começando em <strong>“férias mal planejadas”</strong> e chegando a pelo menos três consequências possíveis para a organização.</p>
+<textarea></textarea>
+</div>
+
+<div class="question">
+<div class="qnum">Questão 10 — Indicadores de Gestão de Pessoas</div>
+<p>Selecione <strong>8 indicadores</strong> que a empresa deveria acompanhar mensalmente. Para cada um, explique o que ele revela e qual decisão poderia apoiar.</p>
+<textarea></textarea>
+</div>
+
+<div class="question">
+<div class="qnum">Questão 11 — Priorização</div>
+<p>Classifique os problemas em <strong>alta, média ou baixa prioridade</strong>. Justifique a ordem considerando impacto, urgência e risco para trabalhadores e empresa.</p>
+<textarea></textarea>
+</div>
+
+<div class="question">
+<div class="qnum">Questão 12 — Plano de ação</div>
+<p>Monte um plano de ação com pelo menos <strong>8 ações</strong>. Utilize a estrutura: problema, ação, responsável, prazo, recurso necessário, indicador e resultado esperado.</p>
+<textarea style="min-height:220px"></textarea>
+</div>
+
+<div class="question">
+<div class="qnum">Questão 13 — Decisão da diretoria</div>
+<p>A diretoria pergunta: <em>“Devemos contratar mais pessoas, demitir os funcionários de baixa produtividade ou investir primeiro na gestão?”</em> Redija um parecer técnico com sua recomendação e justificativa.</p>
+<textarea></textarea>
+</div>
+
+<div class="question">
+<div class="qnum">Questão 14 — Desafio final</div>
+<p>Proponha uma estratégia de <strong>90 dias</strong> para recuperar o clima organizacional, reduzir acidentes, melhorar a produtividade e diminuir desligamentos. Divida as ações em 0–30, 31–60 e 61–90 dias.</p>
+<textarea style="min-height:180px"></textarea>
+</div>
+</section>
+
+<section class="card">
+<h2>6. Entrega final — Painel de decisão</h2>
+<p>Preencha como se estivesse apresentando o diagnóstico à diretoria.</p>
+<table>
+<tr><th>Campo</th><th>Resposta</th></tr>
+<tr><td>3 principais problemas</td><td><textarea class="short"></textarea></td></tr>
+<tr><td>Problema mais urgente</td><td><textarea class="short"></textarea></td></tr>
+<tr><td>Primeira ação a executar</td><td><textarea class="short"></textarea></td></tr>
+<tr><td>Indicador principal de sucesso</td><td><textarea class="short"></textarea></td></tr>
+<tr><td>Resultado esperado em 90 dias</td><td><textarea class="short"></textarea></td></tr>
+</table>
+
+<div class="btns">
+<button onclick="window.print()">🖨️ Imprimir / Salvar em PDF</button>
+<button class="secondary" onclick="salvar()">💾 Salvar respostas no navegador</button>
+<button class="danger" onclick="limpar()">🗑️ Limpar respostas</button>
+</div>
+<div id="result"></div>
+</section>
+</main>
+<div class="footer">Desenvolvido para fins educacionais • JÉFFERSON AZEVEDO</div>
+
+<script>
+const areas=[...document.querySelectorAll("textarea")];
+
+function salvar(){
+  areas.forEach((el,i)=>localStorage.setItem("gestao_caso_"+i,el.value));
+  const r=document.getElementById("result");
+  r.style.display="block";
+  r.textContent="Respostas salvas neste navegador. Elas permanecerão disponíveis neste dispositivo até serem apagadas.";
+}
+function carregar(){
+  areas.forEach((el,i)=>{
+    const v=localStorage.getItem("gestao_caso_"+i);
+    if(v!==null) el.value=v;
+  });
+}
+function limpar(){
+  if(confirm("Deseja realmente apagar todas as respostas?")){
+    areas.forEach((el,i)=>{
+      el.value="";
+      localStorage.removeItem("gestao_caso_"+i);
+    });
+    document.getElementById("result").style.display="none";
+  }
+}
+carregar();
+
+/* BLOQUEIO DE CÓPIA E ATALHOS */
+document.addEventListener("contextmenu", function(e) {
+  e.preventDefault();
+});
+
+document.addEventListener("copy", function(e) {
+  if (!["TEXTAREA","INPUT"].includes(document.activeElement.tagName)) {
+    e.preventDefault();
+  }
+});
+
+document.addEventListener("cut", function(e) {
+  if (!["TEXTAREA","INPUT"].includes(document.activeElement.tagName)) {
+    e.preventDefault();
+  }
+});
+
+document.addEventListener("dragstart", function(e) {
+  e.preventDefault();
+});
+
+document.addEventListener("selectstart", function(e) {
+  if (!["TEXTAREA","INPUT"].includes(e.target.tagName)) {
+    e.preventDefault();
+  }
+});
+
+document.addEventListener("keydown", function(e) {
+  const tag = document.activeElement.tagName;
+  const digitando = tag === "TEXTAREA" || tag === "INPUT";
+
+  // Permite atalhos normais dentro dos campos de resposta.
+  if (digitando) return;
+
+  // Ctrl/Cmd + C, X, A, U, S, P, F, O, I
+  if ((e.ctrlKey || e.metaKey) &&
+      ["c","x","a","u","s","p","f","o","i"].includes(e.key.toLowerCase())) {
+    e.preventDefault();
+    e.stopPropagation();
+  }
+
+  // F12 e combinações para DevTools
+  if (e.key === "F12" ||
+      (e.ctrlKey && e.shiftKey && ["i","j","c"].includes(e.key.toLowerCase()))) {
+    e.preventDefault();
+    e.stopPropagation();
+  }
+});
+
+// Bloqueia alguns menus/seleções por toque e mouse fora dos campos.
+document.addEventListener("mousedown", function(e) {
+  if (!["TEXTAREA","INPUT","BUTTON"].includes(e.target.tagName)) {
+    window.getSelection()?.removeAllRanges();
+  }
+});
+
+</script>
+</body>
+</html>
